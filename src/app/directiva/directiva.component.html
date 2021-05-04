@@ -1,0 +1,54 @@
+<!-- <div *ngIf="!cargando">
+    <p>Ha finalizado la carga</p>
+</div>
+
+<br> 
+
+<img *ngIf="cargando" src="https://styles.redditmedia.com/t5_penom/styles/communityIcon_386whbh0z5041.png?width=256&s=21215a34680fb44ad3e547f86c5abeb5dd960b8b" alt="">
+
+<br> 
+
+<button (click)="alternar()"> A L T E R N A R</button> -->
+<!-- 
+<div *ngFor="let nombre of nombres">
+    <p>Hola mi nombre es: {{nombre}}</p>
+</div>
+
+<div *ngFor="let producto of productos" class="producto">
+    <p>El producto es: {{producto.nombre}}</p>
+    <p>En stock hay: {{producto.stock}}</p>
+    <p>Su Fabricante:{{producto.Fabricante}}</p>
+    <p>La fecha de vencimiento es: {{producto.fechaVence}}</p>
+</div> -->
+
+<!-- <div  [ngSwitch]="pestana" class="tab">
+<button (click) = "cambiarPestana('perfil')">Perfil</button>
+<button (click) = "cambiarPestana('puntos')">Puntos</button>
+<button (click) = "cambiarPestana('info')">Info</button>
+
+<div class="tabConte">
+<p *ngSwitchCase = "'perfil'">   Aplicación de la directiva ngSwitch a un código de html, donde
+    aparece un un tag determinado dependiendo del contenido de una
+    variable.</p>
+<p *ngSwitchCase = "'puntos'">Estos son los puntos</p>
+<p *ngSwitchCase = "'info'">Este es la informacion</p>
+<p *ngSwitchDefault>Seleccione una tecla</p>
+</div>
+
+</div> -->
+
+<br>
+
+<!-- directiva ngClass  -->
+<button (click)="alternarFondo()">Alternar</button>
+
+<div [ngClass]="{'cuadrado': mostrarCuadrado}">
+    <p>Este aparece con un fondo celeste</p>
+</div>
+
+<div *ngFor="let producto of productos" class="producto">
+    <p [ngClass]="{'textoImportante':producto.esImportante, 'textoGrande': producto.textoGrande}">El producto es: {{producto.nombre}}</p>
+    <p>En stock hay: {{producto.stock}}</p>
+    <p>Su Fabricante:{{producto.Fabricante}}</p>
+    <p [class.textoImportante] ="producto.esImportante">La fecha de vencimiento es: {{producto.fechaVence}}</p>
+</div>

@@ -1,0 +1,50 @@
+<!-- //Primer Componente -->
+<!-- <p>¡---titulos works----!</p> -->
+
+<!-- Interpolacion -->
+<!-- <h1>Hola el es mi padre: {{nombre}} {{apellido}}</h1>
+<h2>Hola y ella es mi madre: {{persona.nombre}} {{persona.apellido}}</h2> -->
+
+<!-- Property Binding -->
+<img [src]="imagen" alt="">
+
+<br>
+<br>
+
+<!-- Two way Binding asigna un valor  y devuelve un valor-->
+<input type="text" [(ngModel)]="inputNuevo">
+<p>{{inputNuevo}}</p>
+
+<br>
+
+<label for="">Correo
+    <!-- ngModelChange -->
+    <input type="text"  (ngModelChange)="escribirCorreo()" [(ngModel)]="correo">
+</label>
+
+<label for="">Contreseña
+                          <!-- Evento Keydown  -->
+    <input type="password"  (keydown)="ingresar($event)" [(ngModel)]="password">
+</label>
+
+<button (click)="ingresar($event)">Iniciar</button>
+
+<!-- evento doble click   -->
+<button (dblclick)="llamarAlert()">Doble Click</button>
+
+<br>
+<br>
+<!-- evento Iput  -->
+<!-- <input type="text" (input)="escribir($event.target.value)">
+
+evento focus 
+<input type="text" (focus)="colorFondo($event)"> -->
+
+
+<!-- Evento MouseEnter and mouseleave   -->
+<img src="https://i.pinimg.com/originals/27/b1/81/27b181f2265c4c8141cbf63448f981c8.gif"
+
+(mouseenter)="cambiarTamano($event)" (mouseleave)="incrementarTamano($event)" alt="">
+
+
+
